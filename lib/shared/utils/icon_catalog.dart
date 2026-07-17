@@ -1,0 +1,80 @@
+import 'package:flutter/material.dart';
+
+/// فهرست ثابت آیکون های قابل استفاده در دسته بندی ها و حساب ها.
+/// ارجاع مستقیم به این ثابت ها باعث می شود که هنگام کوچک سازی فونت آیکون
+/// در فرآیند بیلد، تمام گلیف های مورد نیاز حفظ شوند.
+const List<IconData> iconCatalog = [
+  Icons.restaurant,
+  Icons.receipt_long,
+  Icons.directions_car,
+  Icons.movie,
+  Icons.checkroom,
+  Icons.local_hospital,
+  Icons.school,
+  Icons.shopping_bag,
+  Icons.home,
+  Icons.flight,
+  Icons.card_giftcard,
+  Icons.account_balance,
+  Icons.category,
+  Icons.work,
+  Icons.emoji_events,
+  Icons.storefront,
+  Icons.trending_up,
+  Icons.redeem,
+  Icons.savings,
+  Icons.payments,
+  Icons.credit_card,
+  Icons.account_balance_wallet,
+  Icons.pets,
+  Icons.sports_soccer,
+  Icons.local_cafe,
+  Icons.local_gas_station,
+  Icons.phone_android,
+  Icons.wifi,
+  Icons.fitness_center,
+  Icons.child_care,
+  Icons.spa,
+  Icons.laptop,
+  Icons.build,
+  Icons.cake,
+  Icons.beach_access,
+  Icons.local_grocery_store,
+  Icons.book,
+  Icons.music_note,
+  Icons.attach_money,
+  Icons.currency_exchange,
+  Icons.house,
+  Icons.local_shipping,
+  Icons.medical_services,
+  Icons.volunteer_activism,
+  Icons.diamond,
+];
+
+IconData iconFromCodePoint(int codePoint) {
+  return iconCatalog.firstWhere(
+    (icon) => icon.codePoint == codePoint,
+    orElse: () => Icons.category,
+  );
+}
+
+const List<int> colorPalette = [
+  0xFF2E7D32,
+  0xFF4CAF50,
+  0xFFE53935,
+  0xFFFB8C00,
+  0xFF3949AB,
+  0xFF8E24AA,
+  0xFF00897B,
+  0xFF6D4C41,
+  0xFF546E7A,
+  0xFFD81B60,
+  0xFF1E88E5,
+  0xFFF4511E,
+  0xFF757575,
+  0xFF5E35B1,
+  0xFF00ACC1,
+  0xFF7CB342,
+  0xFFFDD835,
+  0xFF26A69A,
+];
