@@ -100,7 +100,7 @@ class ExportService {
         textDirection: pw.TextDirection.rtl,
         build: (context) => [
           pw.Header(text: 'گزارش تراکنش ها'),
-          pw.Table.fromTextArray(
+          pw.TableHelper.fromTextArray(
             headers: ['عنوان', 'مبلغ', 'نوع', 'دسته بندی', 'تاریخ'],
             data: [
               for (final tx in transactions)

@@ -22,26 +22,26 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
       body: ListView(
         children: [
           const _SectionLabel('ظاهر برنامه'),
-          RadioListTile<AppThemeMode>(
-            title: const Text('پیروی از سیستم'),
-            value: AppThemeMode.system,
+          RadioGroup<AppThemeMode>(
             groupValue: themeMode,
             onChanged: (value) =>
                 ref.read(themeModeProvider.notifier).setMode(value!),
-          ),
-          RadioListTile<AppThemeMode>(
-            title: const Text('روشن'),
-            value: AppThemeMode.light,
-            groupValue: themeMode,
-            onChanged: (value) =>
-                ref.read(themeModeProvider.notifier).setMode(value!),
-          ),
-          RadioListTile<AppThemeMode>(
-            title: const Text('تیره'),
-            value: AppThemeMode.dark,
-            groupValue: themeMode,
-            onChanged: (value) =>
-                ref.read(themeModeProvider.notifier).setMode(value!),
+            child: const Column(
+              children: [
+                RadioListTile<AppThemeMode>(
+                  title: Text('پیروی از سیستم'),
+                  value: AppThemeMode.system,
+                ),
+                RadioListTile<AppThemeMode>(
+                  title: Text('روشن'),
+                  value: AppThemeMode.light,
+                ),
+                RadioListTile<AppThemeMode>(
+                  title: Text('تیره'),
+                  value: AppThemeMode.dark,
+                ),
+              ],
+            ),
           ),
           const Divider(),
           const _SectionLabel('مدیریت داده ها'),
